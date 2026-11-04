@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartEstoque - O controle da sua loja na palma da mão</title>
+    <style>
+        /* Estilos Gerais */
+        :root {
+            --primary-color: #0f172a;
+            --accent-color: #2563eb;
+            --text-color: #334155;
+            --bg-light: #f8fafc;
+            --card-bg: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-light);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+        }
+
+        header .slogan {
+            font-size: 1.25rem;
+            font-weight: 300;
+            color: #93c5fd;
+            font-style: italic;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+            flex: 1;
+        }
+
+        section {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.2rem;
+            font-size: 1.75rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .highlight-list {
+            list-style: none;
+            margin: 1rem 0;
+            padding-left: 1rem;
+        }
+
+        .highlight-list li {
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+
+        .highlight-list li::before {
+            content: "•";
+            color: var(--accent-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+            display: inline-block; 
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        /* Container do Logotipo */
+        .logo-container {
+            border: 2px dashed #cbd5e1;
+            border-radius: 8px;
+            padding: 3rem 1rem;
+            text-align: center;
+            background-color: #f1f5f9;
+            color: #64748b;
+        }
+
+        .logo-placeholder {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: #94a3b8;
+            text-align: center;
+            padding: 1.5rem 1rem;
+            font-size: 0.9rem;
+        }
+
+        /* Responsividade */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>SmartEstoque</h1>
+        <p class="slogan">"O controle da sua loja na palma da mão."</p>
+    </header>
+
+    <main>
+        <!-- Apresentação da Startup -->
+        <section id="sobre">
+            <h2>Apresentação da Startup</h2>
+            <p>
+                A iniciativa surgiu de uma discussão simples: aliar as tecnologias e ferramentas da atualidade à resolução de problemas existentes e persistentes, identificados a partir da observação da sociedade brasileira.
+            </p>
+            <p>
+                Após pesquisas e conversas com outros alunos, identificou-se uma problemática relacionada à ineficiência dos sistemas de gerenciamento e controle de estoque utilizados por proprietários de microempresas e empresas de médio porte.
+            </p>
+            <p>
+                A proposta de integrar sistemas inteligentes de gerenciamento e ferramentas tecnológicas modernas, incluindo recursos de Inteligência Artificial, inspirou o nome escolhido para a empresa: <strong>SmartEstoque</strong>.
+            </p>
+            
+            <ul class="highlight-list">
+                <li><strong>Smart:</strong> termo em inglês que significa "inteligente".</li>
+                <li><strong>Estoque:</strong> palavra que representa diretamente a área de atuação da empresa.</li>
+            </ul>
+
+            <h3 style="margin-top: 1.5rem; color: var(--primary-color);">Nosso Slogan</h3>
+            <p>
+                Considerando os recursos tecnológicos da atualidade e a portabilidade desejada para os sistemas oferecidos pela empresa, foi adotado um slogan que transmite a proposta de maneira simples e objetiva.
+            </p>
+            <p>
+                O lema associa a tecnologia dos sistemas móveis à praticidade e ao controle pessoal do estoque, permitindo que o cliente gerencie sua loja de maneira acessível e eficiente. Dessa forma, o slogan também desempenha um papel importante na comunicação da empresa com seu público-alvo, transmitindo sua proposta de valor de maneira clara e direta.
+            </p>
+        </section>
+
+        <!-- Logotipo Provisório -->
+        <section id="logotipo">
+            <h2>Logotipo Provisório</h2>
+            <div class="logo-container">
+                <p class="logo-placeholder">[ Espaço destinado à apresentação do logotipo provisório da SmartEstoque ]</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 SmartEstoque. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
