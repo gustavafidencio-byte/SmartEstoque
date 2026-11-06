@@ -4,131 +4,144 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SmartEstoque - O controle da sua loja na palma da mão</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Estilos Gerais */
-        :root {
-            --primary-color: #0f172a;
-            --accent-color: #2563eb;
-            --text-color: #334155;
-            --bg-light: #f8fafc;
-            --card-bg: #ffffff;
-        }
-
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--bg-light);
+            background: linear-gradient(135deg, #102136 0%, #0d1726 100%);
+            color: #f8fafc;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
-            min-height: 100vh;
+            justify-content: space-between;
         }
 
         header {
-            background-color: var(--primary-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .brand-name {
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
             color: #ffffff;
-            padding: 3rem 1rem;
-            text-align: center;
         }
 
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-            letter-spacing: 1px;
-        }
-
-        header .slogan {
-            font-size: 1.25rem;
-            font-weight: 300;
-            color: #93c5fd;
-            font-style: italic;
+        .brand-name span {
+            color: #d4af37;
         }
 
         main {
-            max-width: 900px;
-            margin: 2rem auto;
-            padding: 0 1.5rem;
             flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
         }
 
-        section {
-            background-color: var(--card-bg);
-            border-radius: 8px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-        }
-
-        h2 {
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--accent-color);
-            padding-bottom: 0.5rem;
-            margin-bottom: 1.2rem;
-            font-size: 1.75rem;
-        }
-
-        p {
-            margin-bottom: 1rem;
-            text-align: justify;
-        }
-
-        .highlight-list {
-            list-style: none;
-            margin: 1rem 0;
-            padding-left: 1rem;
-        }
-
-        .highlight-list li {
-            margin-bottom: 0.5rem;
-            position: relative;
-        }
-
-        .highlight-list li::before {
-            content: "•";
-            color: var(--accent-color);
-            font-weight: bold;
-            font-size: 1.2rem;
-            display: inline-block; 
-            width: 1em;
-            margin-left: -1em;
-        }
-
-        /* Container do Logotipo */
-        .logo-container {
-            border: 2px dashed #cbd5e1;
-            border-radius: 8px;
-            padding: 3rem 1rem;
+        .hero-content {
             text-align: center;
-            background-color: #f1f5f9;
-            color: #64748b;
+            max-width: 800px;
         }
 
-        .logo-placeholder {
-            font-size: 1.1rem;
+        .badge {
+            display: inline-block;
+            background-color: rgba(200, 162, 78, 0.15);
+            color: #d4af37;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.875rem;
             font-weight: 600;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(200, 162, 78, 0.3);
+        }
+
+        h1 {
+            font-size: clamp(2.2rem, 5vw, 3.8rem);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.2rem;
+            letter-spacing: -1px;
+            color: #ffffff;
+        }
+
+        .slogan {
+            font-size: 1.25rem;
+            color: #cbd5e1;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+        }
+
+        .message-box {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(200, 162, 78, 0.25);
+            padding: 2rem;
+            border-radius: 16px;
+            margin-bottom: 2.5rem;
+            backdrop-filter: blur(10px);
+            text-align: left;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .message-box h3 {
+            color: #d4af37;
+            margin-bottom: 0.75rem;
+            font-size: 1.2rem;
+        }
+
+        .message-box p {
+            color: #e2e8f0;
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #c8a24e, #ab8634);
+            color: #0d1726;
+            padding: 0.875rem 2.5rem;
+            border-radius: 8px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 14px rgba(200, 162, 78, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(200, 162, 78, 0.5);
+            background: linear-gradient(135deg, #d4af37, #b8933b);
         }
 
         footer {
-            background-color: var(--primary-color);
-            color: #94a3b8;
             text-align: center;
-            padding: 1.5rem 1rem;
-            font-size: 0.9rem;
+            padding: 2rem;
+            color: #64748b;
+            font-size: 0.875rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
         }
 
-        /* Responsividade */
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 2rem;
-            }
-            section {
-                padding: 1.5rem;
+        @media (max-width: 768px) {
+            .message-box {
+                text-align: center;
             }
         }
     </style>
@@ -136,49 +149,26 @@
 <body>
 
     <header>
-        <h1>SmartEstoque</h1>
-        <p class="slogan">"O controle da sua loja na palma da mão."</p>
+        <div class="brand-name">Smart<span>Estoque</span></div>
     </header>
 
     <main>
-        <!-- Apresentação da Startup -->
-        <section id="sobre">
-            <h2>Apresentação da Startup</h2>
-            <p>
-                A iniciativa surgiu de uma discussão simples: aliar as tecnologias e ferramentas da atualidade à resolução de problemas existentes e persistentes, identificados a partir da observação da sociedade brasileira.
-            </p>
-            <p>
-                Após pesquisas e conversas com outros alunos, identificou-se uma problemática relacionada à ineficiência dos sistemas de gerenciamento e controle de estoque utilizados por proprietários de microempresas e empresas de médio porte.
-            </p>
-            <p>
-                A proposta de integrar sistemas inteligentes de gerenciamento e ferramentas tecnológicas modernas, incluindo recursos de Inteligência Artificial, inspirou o nome escolhido para a empresa: <strong>SmartEstoque</strong>.
-            </p>
+        <div class="hero-content">
+            <div class="badge">Inovação e Tecnologia em Gestão</div>
+            <h1>O controle da sua loja na palma da mão.</h1>
+            <p class="slogan">Revolucionando o gerenciamento de estoques para micro e médias empresas através de inteligência artificial.</p>
             
-            <ul class="highlight-list">
-                <li><strong>Smart:</strong> termo em inglês que significa "inteligente".</li>
-                <li><strong>Estoque:</strong> palavra que representa diretamente a área de atuação da empresa.</li>
-            </ul>
-
-            <h3 style="margin-top: 1.5rem; color: var(--primary-color);">Nosso Slogan</h3>
-            <p>
-                Considerando os recursos tecnológicos da atualidade e a portabilidade desejada para os sistemas oferecidos pela empresa, foi adotado um slogan que transmite a proposta de maneira simples e objetiva.
-            </p>
-            <p>
-                O lema associa a tecnologia dos sistemas móveis à praticidade e ao controle pessoal do estoque, permitindo que o cliente gerencie sua loja de maneira acessível e eficiente. Dessa forma, o slogan também desempenha um papel importante na comunicação da empresa com seu público-alvo, transmitindo sua proposta de valor de maneira clara e direta.
-            </p>
-        </section>
-
-        <!-- Logotipo Provisório -->
-        <section id="logotipo">
-            <h2>Logotipo Provisório</h2>
-            <div class="logo-container">
-                <p class="logo-placeholder">[ Espaço destinado à apresentação do logotipo provisório da SmartEstoque ]</p>
+            <div class="message-box">
+                <h3>Mensagem para você, empreendedor:</h3>
+                <p>Sabemos dos desafios diários na gestão de um negócio. Por isso, criamos o <strong>SmartEstoque</strong>: unindo sistemas inteligentes e ferramentas tecnológicas modernas para eliminar a ineficiência do seu controle de estoque. Mais do que gerenciar produtos, oferecemos a você autonomia, agilidade e precisão para fazer sua empresa crescer sem complicações.</p>
             </div>
-        </section>
+
+            <a href="#contato" class="cta-button">Conheça a Solução</a>
+        </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 SmartEstoque. Todos os direitos reservados.</p>
+        <p>&copy; 2026 SmartEstoque. Desenvolvido com inovação e dedicação.</p>
     </footer>
 
 </body>
