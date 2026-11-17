@@ -5,170 +5,161 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SmartEstoque - O controle da sua loja na palma da mão</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
-        }
-
-        body {
-            background: linear-gradient(135deg, #102136 0%, #0d1726 100%);
-            color: #f8fafc;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 2rem 5%;
-            max-width: 1200px;
-            margin: 0 auto;
-            width: 100%;
-        }
-
-        .brand-name {
-            font-size: 1.6rem;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-            color: #ffffff;
-        }
-
-        .brand-name span {
-            color: #d4af37;
-        }
-
-        main {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 2rem 5%;
-            max-width: 1200px;
-            margin: 0 auto;
-            width: 100%;
-        }
-
-        .hero-content {
-            text-align: center;
-            max-width: 800px;
-        }
-
-        .badge {
-            display: inline-block;
-            background-color: rgba(200, 162, 78, 0.15);
-            color: #d4af37;
-            padding: 6px 16px;
-            border-radius: 50px;
-            font-size: 0.875rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            border: 1px solid rgba(200, 162, 78, 0.3);
-        }
-
-        h1 {
-            font-size: clamp(2.2rem, 5vw, 3.8rem);
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 1.2rem;
-            letter-spacing: -1px;
-            color: #ffffff;
-        }
-
-        .slogan {
-            font-size: 1.25rem;
-            color: #cbd5e1;
-            margin-bottom: 2.5rem;
-            font-weight: 300;
-        }
-
-        .message-box {
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(200, 162, 78, 0.25);
-            padding: 2rem;
-            border-radius: 16px;
-            margin-bottom: 2.5rem;
-            backdrop-filter: blur(10px);
-            text-align: left;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .message-box h3 {
-            color: #d4af37;
-            margin-bottom: 0.75rem;
-            font-size: 1.2rem;
-        }
-
-        .message-box p {
-            color: #e2e8f0;
-            line-height: 1.6;
-            font-size: 1rem;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: linear-gradient(135deg, #c8a24e, #ab8634);
-            color: #0d1726;
-            padding: 0.875rem 2.5rem;
-            border-radius: 8px;
-            font-weight: 700;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 14px rgba(200, 162, 78, 0.3);
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(200, 162, 78, 0.5);
-            background: linear-gradient(135deg, #d4af37, #b8933b);
-        }
-
-        footer {
-            text-align: center;
-            padding: 2rem;
-            color: #64748b;
-            font-size: 0.875rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            max-width: 1200px;
-            margin: 0 auto;
-            width: 100%;
-        }
-
-        @media (max-width: 768px) {
-            .message-box {
-                text-align: center;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <header>
-        <div class="brand-name">Smart<span>Estoque</span></div>
+        <a href="index.html" class="brand">
+            <img src="img/logo.png" alt="Logo SmartEstoque" class="brand-logo">
+            <span class="brand-name">Smart<span>Estoque</span></span>
+        </a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Início</a></li>
+                <li><a href="quem-somos.html">Quem Somos</a></li>
+                <li><a href="personas.html">Personas</a></li>
+                <li><a href="contato.php">Contato</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <div class="hero-content">
-            <div class="badge">Inovação e Tecnologia em Gestão</div>
-            <h1>O controle da sua loja na palma da mão.</h1>
-            <p class="slogan">Revolucionando o gerenciamento de estoques para micro e médias empresas através de inteligência artificial.</p>
-            
-            <div class="message-box">
-                <h3>Mensagem para você, empreendedor:</h3>
-                <p>Sabemos dos desafios diários na gestão de um negócio. Por isso, criamos o <strong>SmartEstoque</strong>: unindo sistemas inteligentes e ferramentas tecnológicas modernas para eliminar a ineficiência do seu controle de estoque. Mais do que gerenciar produtos, oferecemos a você autonomia, agilidade e precisão para fazer sua empresa crescer sem complicações.</p>
+        <section id="inicio" class="hero-section">
+            <div class="hero-grid">
+                <div class="hero-text">
+                    <span class="badge">Tecnologia da Informação &bull; SaaS para o Varejo</span>
+                    <h1>O controle da sua loja na palma da mão.</h1>
+                    <p class="slogan">Soluções inteligentes em nuvem para eliminar divergências de estoque e impulsionar micro e pequenas empresas do comércio varejista regional.</p>
+                    <a href="quem-somos.html" class="cta-button">Conheça Nossa História</a>
+                </div>
+                <div class="hero-image">
+                    <img src="img/equipe-ifsp.jpg" alt="Equipe SmartEstoque no IFSP Campus Guarulhos">
+                </div>
             </div>
+        </section>
 
-            <a href="#contato" class="cta-button">Conheça a Solução</a>
-        </div>
+        <section id="mvv" class="section-container">
+            <h2 class="section-title">Missão, Visão e Valores</h2>
+            <p class="section-subtitle">Os pilares estratégicos que orientam a SmartEstoque</p>
+            
+            <div class="grid-3">
+                <article class="card-box">
+                    <h3>Missão</h3>
+                    <p>Facilitar a gestão de estoque dos pequenos e médios varejos com soluções práticas, acessíveis e intuitivas, que aumentem a eficiência do dia a dia e apoiem o crescimento do negócio.</p>
+                </article>
+
+                <article class="card-box">
+                    <h3>Visão</h3>
+                    <p>Tornar-se, até 2030, a plataforma de gestão de estoque de referência para o comércio varejista regional, reconhecida pela facilidade de uso do software, pela qualidade do suporte prestado aos clientes e pela evolução constante do produto.</p>
+                </article>
+
+                <article class="card-box">
+                    <h3>Valores</h3>
+                    <ul class="values-list">
+                        <li><strong>Simplicidade:</strong> Soluções práticas e centradas na experiência do usuário.</li>
+                        <li><strong>Foco no cliente:</strong> Prioridade em todas as etapas, da prospecção ao acompanhamento dos resultados.</li>
+                        <li><strong>Qualidade e confiabilidade:</strong> Sistemas e processos com dados precisos e alta disponibilidade.</li>
+                        <li><strong>Integração:</strong> Alinhamento contínuo entre Tecnologia, Comercial e Operações.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section id="extensao" class="section-container">
+            <h2 class="section-title">Ações de Extensão</h2>
+            <p class="section-subtitle">Como a SmartEstoque apoia o comércio varejista regional e a comunidade</p>
+
+            <div class="grid-4">
+                <a href="quem-somos.html#consultoria" class="card-link">
+                    <img src="img/icone-consultoria.png" alt="Ícone Consultoria" class="card-icon">
+                    <h3>Consultoria</h3>
+                    <p>Diagnóstico para eliminar divergências entre o estoque físico e contábil e estruturar processos de reposição.</p>
+                    <span class="card-cta">Saiba mais &rarr;</span>
+                </a>
+
+                <a href="quem-somos.html#capacitacao" class="card-link">
+                    <img src="img/icone-capacitacao.png" alt="Ícone Capacitação" class="card-icon">
+                    <h3>Capacitação</h3>
+                    <p>Treinamento prático das equipes de loja e oficinas sobre controle de inventário, entradas, saídas e ferramentas digitais.</p>
+                    <span class="card-cta">Saiba mais &rarr;</span>
+                </a>
+
+                <a href="quem-somos.html#prestacao-servico" class="card-link">
+                    <img src="img/icone-servico.png" alt="Ícone Prestação de Serviço" class="card-icon">
+                    <h3>Prestação de Serviço</h3>
+                    <p>Implantação da plataforma em nuvem, cadastro de produtos, suporte técnico contínuo e acompanhamento de Customer Success.</p>
+                    <span class="card-cta">Saiba mais &rarr;</span>
+                </a>
+
+                <a href="quem-somos.html#projetos-engenharia" class="card-link">
+                    <img src="img/icone-projetos.png" alt="Ícone Projetos de Engenharia" class="card-icon">
+                    <h3>Projetos de Engenharia</h3>
+                    <p>Desenvolvimento de soluções sob medida em software, relatórios gerenciais e integração com sistemas de vendas e emissão fiscal.</p>
+                    <span class="card-cta">Saiba mais &rarr;</span>
+                </a>
+            </div>
+        </section>
+
+        <section id="equipe" class="section-container">
+            <h2 class="section-title">Nossa Equipe</h2>
+            <p class="section-subtitle">Clique em um integrante para acessar os detalhes completos de sua persona</p>
+
+            <div class="grid-personas">
+                <a href="personas.html#persona-1" class="persona-card">
+                    <img src="img/persona-1.jpg" alt="Foto do Integrante 1" class="persona-photo">
+                    <h3>Nome do Integrante 1</h3>
+                    <p class="persona-role">Tecnologia / Desenvolvimento</p>
+                </a>
+
+                <a href="personas.html#persona-2" class="persona-card">
+                    <img src="img/persona-2.jpg" alt="Foto do Integrante 2" class="persona-photo">
+                    <h3>Nome do Integrante 2</h3>
+                    <p class="persona-role">Comercial / Estratégia</p>
+                </a>
+
+                <a href="personas.html#persona-3" class="persona-card">
+                    <img src="img/persona-3.jpg" alt="Foto do Integrante 3" class="persona-photo">
+                    <h3>Nome do Integrante 3</h3>
+                    <p class="persona-role">Operações / Customer Success</p>
+                </a>
+
+                <a href="personas.html#persona-4" class="persona-card">
+                    <img src="img/persona-4.jpg" alt="Foto do Integrante 4" class="persona-photo">
+                    <h3>Nome do Integrante 4</h3>
+                    <p class="persona-role">UX / Suporte Técnico</p>
+                </a>
+            </div>
+        </section>
+
+        <section id="localizacao" class="section-container">
+            <h2 class="section-title">Localização da Empresa</h2>
+            <p class="section-subtitle">Polo de atendimento sediado no IFSP Campus Guarulhos</p>
+
+            <div class="location-box">
+                <div class="location-info">
+                    <h3>IFSP - Campus Guarulhos</h3>
+                    <p><strong>Endereço:</strong> Avenida Salgado Filho, 3501 - Vila Rio de Janeiro, Guarulhos - SP - CEP 07115-000</p>
+                    <p><strong>Atuação:</strong> Projeto de Curricularização da Extensão</p>
+                    <a href="contato.php" class="cta-button">Fale Conosco</a>
+                </div>
+                <div class="location-map">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3660.485947269214!2d-46.53988392467354!3d-23.44293297888142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef51f33355555%3A0x6a0a0a0a0a0a0a0a!2sIFSP%20-%20Campus%20Guarulhos!5e0!3m2!1spt-BR!2sbr!4v1700000000000" 
+                        width="100%" 
+                        height="280" 
+                        style="border:0; border-radius: 12px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 SmartEstoque. Desenvolvido com inovação e dedicação.</p>
+        <p>&copy; 2026 SmartEstoque - O controle da sua loja na palma da mão. IFSP Campus Guarulhos.</p>
     </footer>
 
 </body>
